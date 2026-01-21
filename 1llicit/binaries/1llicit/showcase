@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Define your Art file
+ART_FILE="Lbs-Note"
+
+# Clear screen
+clear
+
+# --- COLORS ---
+BOLD="\033[1m"
+CYAN="\033[1;36m"
+WHITE="\033[1;37m"
+DIM="\033[2m"
+RESET="\033[0m"
+
+# --- 1. Print the Logo (Shifted Right) ---
+echo -ne "${WHITE}${BOLD}"
+sed 's/^/    /' "$ART_FILE"
+echo -ne "${RESET}"
+
+# --- 2. Print the Info (Overlay Mode) ---
+COL=35
+
+tput cup 2 $COL; echo -e "${WHITE}${BOLD}  !-1llicit-! Framework${RESET}"
+tput cup 3 $COL; echo -e "${DIM}--------------------------${RESET}"
+tput cup 4 $COL; echo -e "${CYAN}OS     ${RESET} : Android / Termux"
+tput cup 5 $COL; echo -e "${CYAN}PROFILE${RESET} : github.com/LbsLightX"
+tput cup 6 $COL; echo -e "${CYAN}REPO   ${RESET} : LbsLightX/1llicit"
+tput cup 7 $COL; echo -e "${DIM}--------------------------${RESET}"
+
+# The Quote (The jesse signature)
+tput cup 9 $COL;  echo -e "${WHITE}       Yo! Yo! Yo! 148-3${RESET}"
+tput cup 10 $COL; echo -e "${WHITE}  to the 3 to the 6 to the 9,${RESET}"
+tput cup 11 $COL; echo -e "${WHITE}    representing the ABQ — ${RESET}"
+tput cup 12 $COL; echo -e "${WHITE}          whats up, biatch!${RESET}"
+
+# Color Palette (Shifted right to center under text)
+PCOL=40
+tput cup 14 $PCOL; echo -e "\033[1;30m██\033[1;31m██\033[1;32m██\033[1;33m██\033[1;34m██\033[1;35m██\033[1;36m██\033[1;37m██\033[1;90m██\033[1;91m██\033[0m"
+tput cup 15 $PCOL; echo -e "\033[0;30m██\033[0;31m██\033[0;32m██\033[0;33m██\033[0;34m██\033[0;35m██\033[0;36m██\033[0;37m██\033[0;90m██\033[0;91m██\033[0m"
+
+# Move cursor to bottom
+tput cup 18 0
