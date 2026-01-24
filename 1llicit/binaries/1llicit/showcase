@@ -20,8 +20,8 @@ ART_CONTENT='
 ⠀⠀⠠⢾⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣷⡤
 '
 
-# Clear screen
-clear
+# Clear screen (Hard Reset)
+tput clear
 
 # --- COLORS ---
 BOLD="\033[1m"
